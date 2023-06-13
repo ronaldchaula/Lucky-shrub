@@ -2,16 +2,16 @@
     body{
         color: #26877F;
         text-decoration: none;
-        width: 100%;
-
+        border: 1px solid rgba(0, 0, 0, .8);
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(4,1fr);
+        grid-template-rows: 12vh 40vh 40vh 40vh 20vh;
     }
       header{
+        grid-column: 1/2;
+        grid-row: 1/2;
         font-weight: 600;
-        border-bottom: 1px solid rgba(38, 135, 127, 80%);;
-        width: 100vw;
+        border-bottom: 1.5px solid rgba(38, 135, 127, 80%);
         height: 12vh;
         display: flex;
         flex-direction: row;
@@ -32,26 +32,23 @@
       }
       header nav ul .nav-bars{
        
-        width: 50%;
+        width: 100%;
         height: 100%;
         display: flex;
         flex-direction: column;
         
       }
-      header nav ul .nav-bars div{
-        background-color: rgba(38, 135, 127, 80%);
-        border: 1px solid rgba(38, 135, 127, 80%);
-        width: 9vw;
-        height: 3px;
-        border-radius: 10px;
-        margin: 2%;
+      header nav ul .nav-bars img{
+        /* background-color: rgba(38, 135, 127, 80%); */
+        width: 15vw;
+        height: 10vh;
         padding: 1px;
       }
       header nav ul .mobile-nav-content{
         display: none;
       }
       header nav ul{
-        width: 100%;
+        /* width: 100%; */
         height: 100%;
         display: flex;
         justify-content: space-evenly;
@@ -64,7 +61,7 @@
       }
       header div{
         /* margin-left: 10%; */
-        width: 20%;
+         width: 20%;
         height: 100%;
         margin: .8%;
         display: flex;
@@ -72,16 +69,201 @@
         align-items: center;
       }
       header div img{
-        width: 8vw;
+        width: 9vw;
       }
+      main{
+        grid-column: 1/2;
+        grid-row: 2/2;
+        background-image: url(../assets/hero-image.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      main .overlay{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 255, 255, .50);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    main .overlay .contentContainer{
+        width: 75%;
+        height: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(38, 135, 127,0.7);
+        padding: 1.5%;
+        border-radius: 1.5%;
+    }
+    main .overlay .contentContainer .content{
+        font-weight: 900;
+        text-align: center;
+        font-size: 4.5vw;
+        color: rgb(255, 255, 255,0.8);
+        margin-top: -2%;
+        padding: 1%;
+        text-transform: uppercase;
+    }
+    main .overlay .contentContainer .callToAction{
+        margin-top: 5%;
+        width: 45%;
+        height: 20%;
+        font-size: 2.5vw;
+        color: rgb(255, 255, 255,0.9);
+        background-color: transparent;
+        border: 1px solid rgb(255, 255, 255,0.9);
+        transition-property: background-color;
+        transition-duration: 1s;
+        transition-delay: 5ms;
+        transition-timing-function: ease-in-out;
+    }
+    main .overlay .contentContainer .callToAction:hover{
+        background-color:rgb(38, 135, 127,0.7);
+        color:rgb(255, 255, 255,0.9);
+        border: 1px solid rgb(255, 255, 255,0.9);;
+    }
+    footer{
+        border: 4px solid black;
+        grid-row: 5/6;
+        grid-column: 1/6;
+    }
 }
-/*tablets*/
+/*
 @media screen and (max-width: 820px){
 
 }
-/*desktos*/
+desktos  */ 
 @media  screen and (min-width:1200px) {
-    body{
+body{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 15vh 50vh 50vh 50vh 30vh;
+}
+header{
+    grid-column: 1/6;
+    grid-row: 1/2;
+    border-bottom: 3px solid rgb(38, 135, 127,0.8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .branding{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .branding .logo{
+   width: 3.2vw;
+}
+header nav{
+    /* container for the menu */
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header nav ul{
+    width: 100%;
+    height: 100%;
+}
+header nav ul .regular-content{
+ 
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header nav ul .regular-content li a{
+    text-decoration: none;
+    font-size: 1.4vw;
+    font-weight: 600;
+    color: rgb(38, 135, 127,0.7);
+}
+/* start of disable the context menus not used in desktop version */
+header nav ul .nav-bar{
+    display: none;
+}
+header nav ul .mobile-nav-content{
+    display: none;
+}
+/* end of disable the context menus not used in desktop version */
+main{
+    grid-row: 2/4;
+    grid-column: 1/6;
+    background-image: url(../assets/hero-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+main .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .50);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+main .overlay .contentContainer{
+    margin-right: 5%;
+    width: 45%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(38, 135, 127,0.7);
+    padding: 1.5%;
+    border-radius: 1.5%;
+}
+main .overlay .contentContainer .content{
+    font-weight: 900;
+    text-align: left;
+    font-size: 4.5vw;
+    color: rgb(255, 255, 255,0.8);
+    margin-top: -2%;
+    padding: 1%;
+}
+main .overlay .contentContainer .callToAction{
+    margin-top: 5%;
+    width: 45%;
+    height: 15%;
+    font-size: 1.5vw;
+    color: rgb(255, 255, 255,0.9);
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255,0.9);
+    transition-property: background-color;
+    transition-duration: 1s;
+    transition-delay: 5ms;
+    transition-timing-function: ease-in-out;
+}
+main .overlay .contentContainer .callToAction:hover{
+    background-color:rgb(38, 135, 127,0.7);
+    color:rgb(255, 255, 255,0.9);
+    border: 1px solid rgb(255, 255, 255,0.9);;
+}
+footer{
+    border: 4px solid black;
+    grid-row: 5/6;
+    grid-column: 1/6;
+}
+header .branding img{
+    width: 5vw;
+}
+}
+
+
+
+
+    /* body{
         font-size: 4vw;
         color: #26877F;
         text-decoration: none;
@@ -90,13 +272,11 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: repeat(4,1fr);
-        grid-template-areas: "front"
-        "about"
-        "contacts"
-        "footer";
-        grid-gap: none;
+      
     }
       header{
+        grid-row: 1/2;
+        grid-column: 1/2;
         font-weight: 600;
         border-bottom: 1px solid rgba(38, 135, 127, 80%);;
         width: 100vw;
@@ -107,6 +287,7 @@
         align-items: center;
       }
       header nav{
+  
         width: 70%;
         height: 80%;
         display: flex;
@@ -115,14 +296,24 @@
     
       }
       header nav ul{
+  
         width: 100%;
         height: 100%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
         font-size: 1.2rem;
       }
-      header nav ul li a{
+      header nav ul .regular-content{
+        width: 100%;
+        height: 100%;
+     
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+      }
+      header nav ul div li a{
     text-decoration: none;
     color: rgba(38, 135, 127, 80%);
       }
@@ -137,9 +328,13 @@
       header div img{
         width: 17%;
       }
-}
+      header nav ul .mobile-nav-content{
+        display: none;
+      }
+      header nav ul .nav-bars{
+       display: none;}
+       main{
+        grid-row: 2/3;
+        grid-column: 1/2;
 
-
-
-
-/* } */
+       } */
