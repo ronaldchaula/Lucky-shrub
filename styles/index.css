@@ -1,8 +1,7 @@
-@media screen and (max-width: 414px){
+@media screen and (max-width: 428px){
     body{
         color: #26877F;
         text-decoration: none;
-        border: 1px solid rgba(0, 0, 0, .8);
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 12vh 40vh 40vh 40vh 40vh 40vh 40vh 20vh;
@@ -73,23 +72,39 @@
       }
       main{
         grid-column: 1/2;
-        grid-row: 2/3;
+        grid-row: 2/7;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:40vh 40vh 40vh ;
+        grid-template-areas: "banner"
+        "cards"
+        "cards";
+      }
+    
+      main .overlay{
+        grid-area: "banner" ;
+        width: 100%;
+        height: 100%;
         background-image: url(../assets/hero-image.jpg);
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        border-top: 2px solid rgba(38, 135, 127, 80%);
-        border-bottom: 2px solid rgb(255, 255, 255,0.8);
-      }
-      main .overlay{
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255, 255, 255, .50);
         display: flex;
         justify-content: center;
         align-items: center;
+       
     }
-    main .overlay .contentContainer{
+    main .overlay .mainBgImage{
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, .50);
+      border-top: 2px solid rgba(38, 135, 127, 80%);
+      border-bottom: 2px solid rgb(255, 255, 255,0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    main .overlay .mainBgImage .contentContainer{
         width: 75%;
         height: 35%;
         display: flex;
@@ -100,7 +115,7 @@
         padding: 1.5%;
         border-radius: 1.5%;
     }
-    main .overlay .contentContainer .content{
+    main .overlay .mainBgImage .contentContainer .content{
         font-weight: 900;
         text-align: center;
         font-size: 4.5vw;
@@ -109,7 +124,7 @@
         padding: 1%;
         text-transform: uppercase;
     }
-    main .overlay .contentContainer .callToAction{
+    main .overlay .mainBgImage .contentContainer .callToAction{
         margin-top: 5%;
         width: 45%;
         height: 20%;
@@ -122,23 +137,12 @@
         transition-delay: 5ms;
         transition-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1);
     }
-    main .overlay .contentContainer .callToAction:hover{
+    main .overlay .mainBgImage .contentContainer .callToAction:hover{
         background-color:rgb(255, 255, 255,0.9);
         color:rgb(38, 135, 127,0.7);
         border: 1px solid rgb(38, 135, 127,0.7);
     }
-    aside{
-        grid-column:1/2;
-        grid-row:3/7 ;
-        border: #26877F 1px solid;
-        background-color: #26877F;
-        border-bottom: 2px solid rgb(255, 255, 255,0.8);
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-wrap: wrap;
-
-    }
+  
     /*animated background images*/
     @keyframes animated-bg {
       from{
@@ -147,15 +151,15 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position:inherit;
-        border: 1px solid rgb(255, 255, 255,0.8);
+        border: 1px solid rgba(48, 44, 44, 0.8);
       }
       50%{
         width: 95%;
-        background-color: rgb(255, 255, 255,0.8);
+        background-color: rgba(48, 44, 44, 0.8);;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: inherit;
-        border: 1px solid rgb(255, 255, 255,0.8);
+        border: 1px solid rgba(48, 44, 44, 0.8);;
       }
       to{
         width: 95%;
@@ -166,22 +170,39 @@
         border: 1px solid rgba(0, 0, 0, 0.452);
       }
   }
-  aside{
-    border: 1px solid red;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  main aside{
+    grid-row: 2/7;
+    border-top: 2px solid rgb(255, 255, 255,0.8);
+    background-color: #26877F;
+    border-bottom: 2px solid rgb(255, 255, 255,0.8);
+}
+  main aside .cardTitle{
+    color: rgb(255, 255, 255,0.8);
+    font-size: 5vw;
+    text-align: center;
+    margin-top: 7%;
+    font-weight: 900;
   }
-  aside div{
-    border: 1px solid black;
+  .headLine{
+    width: 35%;
+    height: 0%;
+    margin: 1% auto;
+    border-bottom: 1px solid rgba(255, 255, 255, .80)
   }
-  aside div article{
-    background-color: rgb(255, 255, 255,0.8);
-    padding: 1%;
+  .cardLine{
+    width: 50%;
+    border-bottom: 1px solid rgb(38, 135, 127,0.8);
+  }
+  main aside div{
+    width: 100%;
+    height: 100%;
+  }
+  main aside div article{
+      background-color: rgb(255, 255, 255,0.8);
+      padding: 1.5%;
       width: 75%;
-      height: 30%;
-      border: 1px solid rgba(0, 0, 0, 0.493);
+      height: 28%;
+      border: 1px solid rgba(255, 255, 255, .50);
       border-radius: 1%;
       margin-top: 5%;
       margin-left: auto;
@@ -218,7 +239,7 @@
       align-items: center;
   }
   aside div article .text-window h2{
-      border-bottom: 1px solid rgb(38, 135, 127,0.8);
+     
       font-size: 4vw;
       margin: 1%;
 
@@ -238,6 +259,7 @@
    width: 96%;
    height: 20%;
    margin-bottom: 2%;
+   font-size: 4vw;
    color: rgb(255, 255, 255,0.8);
    background-color: #26877F;
    border: 1px solid rgb(255, 255, 255,0.8);
