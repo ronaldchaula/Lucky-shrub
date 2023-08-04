@@ -1,103 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>animated bg</title>
-    <style>
-        @keyframes animated-bg {
-            from{
-              width: 95%;
-              background-image: url(assets/Small-garden-landscaping-ideas1.jpg);
-              background-size: cover;
-              background-repeat: no-repeat;
-              background-position:inherit;
-            }
-            50%{
-              width: 95%;
-              background-color: rgba(0, 0, 0, 0.5);
-              background-size: cover;
-              background-repeat: no-repeat;
-              background-position: inherit;
-            }
-            to{
-              width: 95%;
-              background-image: url(assets/Small-garden-landscaping-ideas2.webp);
-              background-size: cover;
-              background-repeat: no-repeat;
-              background-position:inherit;
-            }
-        }
-        article{
-            width: 25%;
-            height: 80vh;
-            border: 1px solid rgba(0, 0, 0, 0.493);
-            border-radius: 1%;
-            margin-top: 5%;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: auto;
-        }
-        article .img-window{
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr;
-            /* border: 1px solid saddlebrown; */
-            margin: 2% auto;
-            width: 95%;
-            height: 50%;
-            animation-name: animated-bg;
-            animation-duration: 10s;
-            animation-delay: 2s;
-            animation-iteration-count: infinite;
-            animation-direction: alternate;
-            animation-timing-function: ease-in-out ;
-        }
-        article .text-window{
-        
-            margin: 2% auto;
-            width: 95%;
-            height: 44%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        article .text-window h2{
-            border-bottom: 1px solid rgba(0, 0, 0, 0.493);
-
-        }
-       article .text-window p{
-            
-            margin: 2% auto;
-            width: 95%;
-            height: 78%;
-            text-align: center;
-
-        }
-        article .text-window button{
-         width: 96%;
-         height: 20%;
-         margin-bottom: 2%;
-        }
-    </style>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/animated.css">
+    <link rel="icon" type="image/png" href="assets/Lucky-Shrub-logos/luckyShrubFavicon.png">
 </head>
-<body>
-    <article>
-        <div class="img-window">
 
+<header>
+    <!--this is a logo-->
+    <div class="branding">
+        <a href="#start">
+            <img src="assets/Lucky-Shrub-logos/greenOne.png" alt="Luckyshrub logo" class="logo">
+        </a>
+    </div>
+    <!--this is a navigation container-->
+    <nav>
+
+        <ul>
+
+            <div class="regularContent">
+                <li><a href="#start">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">ECSTATICS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </div>
+            <div class="navBars">
+                <!-- <div></div>
+                    <div></div>
+                    <div></div> -->
+                <img src="assets/bars.png">
+            </div>
+            <div class="mobileNavContent">
+                <li><a href="#header">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#">ECSTATICS</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </div>
+
+        </ul>
+    </nav>
+</header>
+<main>
+    <div class="heroBanner">
+        <div class="overlay">
+
+            <div class="contentContainer">
+                <p class="content">
+                    Let us bring your ideal garden to life
+                </p>
+                <button class="callToAction">
+                    LEARN MORE..
+                </button>
+
+            </div>
         </div>
-        <div class="text-window">
-            <h2>
-                Land Scaping
-            </h2>
-            <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita animi quia non incidunt ipsa? Quo deleniti impedit, eius alias distinctio et id repellat odit ex quas dolorem minima. Provident, excepturi.
-            </p>
-            <button>
-                LEARN MORE..
-            </button>
+    </div>
+    <div class="cardsAndForms">
+        <div class="aboutCards contained">
+            <div class="sectionTitle">
+                <h1>ABOUT</h1>
+            </div>
+            <div class="cardsSection" id="about">
+                <article>
+                    <div class="img-window">
+            
+                    </div>
+                    <div class="text-window">
+                        <h2>
+                            Land Scaping
+                        </h2>
+                        <div class="headLine cardLine"></div>
+                        <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita animi quia non incidunt ipsa? Quo deleniti impedit, eius alias distinctio et id repellat odit ex quas dolorem minima. Provident, excepturi.
+                        </p>
+                        <button>
+                            LEARN MORE..
+                        </button>
+                    </div>
+                </article>
+                <article>
+                    <div class="img-window">
+            
+                    </div>
+                    <div class="text-window">
+                        <h2>
+                            Land Scaping
+                        </h2>
+                        <div class="headLine cardLine"></div>
+                        <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita animi quia non incidunt ipsa? Quo deleniti impedit, eius alias distinctio et id repellat odit ex quas dolorem minima. Provident, excepturi.
+                        </p>
+                        <button>
+                            LEARN MORE..
+                        </button>
+                    </div>
+                </article>
+                <article>
+                    
+                    <div class="img-window">
+            
+                    </div>
+                    <div class="text-window">
+                        <h2>
+                            Land Scaping
+                        </h2>
+                        <div class="headLine cardLine"></div>
+                        <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita animi quia non incidunt ipsa? Quo deleniti impedit, eius alias distinctio et id repellat odit ex quas dolorem minima. Provident, excepturi.
+                        </p>
+                        <button>
+                            LEARN MORE..
+                        </button>
+                    </div>
+                </article>
+            </div>
+           
         </div>
-    </article>
+        <div class="contactForm contained">
+            <div>
+                <h1>
+                    contact us
+                </h1>
+            </div>
+            <form action="index.php" method="post">
+                <div class="names">
+                    <label for="names">Names</label>
+                    <input name="names" id="names" type="text">
+                </div>
+                <div class="email">
+                    <label for="email">Email</label>
+                    <input type="email" pattern="[a-z]/[0-9]~@\[a-z]">
+                </div>
+                <div class="message">
+                    <label for="Message">Message</label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <button type="submit" class="sendButton">
+                    SEND
+                </button>
+            </form>
+            
+        </div>
+    </div>
+    
+    
+</main>
+<footer>
+    footer
+    <div></div>
+    <div></div>
+    <div></div>
+</footer>
+
+
 </body>
+
 </html>
+
+<body>
+   

@@ -1,0 +1,39 @@
+  *{
+        box-sizing: border-box;
+     }
+     body{
+        margin: 5px;
+        border: 1px solid;
+        display: grid;
+        grid-template-columns: repeat(12,8.33wv);
+        grid-template-rows: repeat(24,4.167vh);
+     }
+
+     header{
+        grid-column: 1/13;
+        grid-row:1/6;
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+
+     }
+     .logo-container{
+        grid-column: 6/8;
+        grid-row: 1/3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+     .logo{
+        max-width: 35px;
+     }
+     nav{
+        border: 1px solid red;
+        grid-column: 1/13;
+        grid-row:3/5;
+        background-color: rgba(38, 135, 127, 80%);
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-template-rows: repeat(3,1fr);
+     }
+    
