@@ -2,14 +2,14 @@ body{
    box-sizing: border-box;
    display: grid;
    grid-template-columns: repeat(12,1fr);
-   grid-template-rows: repeat(12,12vh);
+   grid-template-rows: repeat(9,12vh);
    grid-gap: 10px;
    margin: .5%;
 }
 
 header{
    margin-top: 15px;
-   grid-column: 2/12;
+   grid-column: 1/13;
    grid-row:1/2;
    border: 1.5px solid #28847c;
    margin: 0 auto;
@@ -27,7 +27,7 @@ img{
 }
 
 nav{
-   grid-column: 2/12;
+   grid-column: 1/13;
    grid-row:2/3;
    
    margin: 0 auto;
@@ -74,7 +74,7 @@ border-radius: 5px;
       transition: ease-in-out .5s;
    }
 main{
-   grid-column: 2/12;
+   grid-column: 1/13;
    grid-row:3/9;
    border: 1.5px solid #28847c;
    margin: 0 auto;
@@ -153,7 +153,7 @@ main{
    border-radius: 15px;
 }
 footer{
-   grid-column: 2/12;
+   grid-column: 1/13;
    grid-row:9/10;
    border: 1.5px solid #28847c;
    margin: 0 auto;
